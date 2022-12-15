@@ -3,25 +3,53 @@ users = [
         "firstname": "James",
         "lastname": "John",
         "email": "jamesjohn@gmail.com",
-        "password": "password1"
+        "password": "password1",
+        "awards": ['first_class', "second_citizen", "oprah_status"],
+        "address": {
+            "house_no": 2,
+            "street_name": "Oweh",
+            "state": "Lagos",
+            "country": "Nigeria"
+        }
     }, 
     {
        "firstname": "Mary",
         "lastname": "Joseph",
         "email": "maryjoseph@gmail.com",
-        "password": "1996_mypassword"
+        "password": "1996_mypassword",
+        "awards": [],
+        "address": {
+            "house_no": 1,
+            "street_name": "Abia",
+            "state": "Lagos",
+            "country": "Nigeria"
+        }
     },
     {
         "firstname": "Andrew",
         "lastname": "Jacob",
         "email": "andry@gmail.com",
-        "password": "flower123"
+        "password": "flower123",
+        "awards": ['second-citizen'],
+        "address": {
+            "house_no": 45,
+            "street_name": "Jacobson",
+            "state": "Ogun",
+            "country": "Nigeria"
+        }
     },
     {
         "firstname": "Akeem",
         "lastname": "Ahmed",
         "email": "akeem@gmail.com",
-        "password": "password2"
+        "password": "password2",
+        "awards": ["first-class"],
+        "address": {
+            "house_no": 55,
+            "street_name": "Oweh",
+            "state": "Lagos",
+            "country": "Nigeria"
+        }
     }
 
 ]
@@ -52,6 +80,12 @@ userPassword = input("Please enter your password: ")
 for user in users:
     if user['email'] == useremail and user['password'] == userPassword:
         print("Welcome " + user['firstname'] + " " + user['lastname'])
+
+        print("""---> Awards Received: """ + str(user['awards']) + """
+---> Street Name: """ + user["address"]["street_name"] +
+        
+            """ """)
+
         break
 else: 
     print("You are not registered")
