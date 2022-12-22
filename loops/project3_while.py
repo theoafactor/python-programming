@@ -87,7 +87,7 @@ while checker:
     else: 
         no_of_failed_attempt = no_of_failed_attempt + 1
         if no_of_failed_attempt < 3:
-            print("Invalid user email and password. Please check and try again.") 
+            print("ail and password. Please check and try again.") 
         else:
             print("You ran out of chances. No more attempt")
             checker = False
